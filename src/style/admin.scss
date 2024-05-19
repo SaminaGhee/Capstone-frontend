@@ -1,0 +1,70 @@
+.admin-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .admin-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-description {
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #20a23a;
+  }
+  
+  .admin-submit-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .admin-edit-btn,
+  .admin-delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admin-edit-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .admin-delete-btn {
+    background-color: #ab6f1b;
+    color: white;
+  }
+  
+  .admin-edit-btn:hover,
+  .admin-delete-btn:hover {
+    opacity: 0.8;
+  }
