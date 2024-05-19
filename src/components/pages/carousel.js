@@ -9,7 +9,7 @@ const Carousel = ({ images }) => {
 
   const fetchImageUrls = () => {
     try {
-      const response = axios.get('/products/images');
+      const response = axios.get('https://capstone-ecom-back-0acc37750539.herokuapp.com/products/images');
       images = response.data;
     } catch (error) {
       console.error('Error fetching image URLs:', error);

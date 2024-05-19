@@ -16,7 +16,7 @@ const Home = (props) => {
     }, []);
 
     const getItems = () => {
-        fetch('http://127.0.0.1:5000/products', { method: 'GET' })
+        fetch('https://capstone-ecom-back-0acc37750539.herokuapp.com/products', { method: 'GET' })
             .then(response => response.json())
             .then(data => {
                 setProducts(data);

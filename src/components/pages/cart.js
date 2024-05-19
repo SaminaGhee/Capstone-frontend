@@ -11,8 +11,7 @@ const Cart = ({cartItems, setCart}) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/products', { method: 'GET' })
-      .then(response => response.json())
+    fetch('https://capstone-ecom-back-0acc37750539.herokuapp.com/products', { method: 'GET' })  
       .then(data => {
         setProducts(data);
         setLoading(false);

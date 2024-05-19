@@ -16,7 +16,7 @@ const Admin = () => {
     }, []);
 
     const fetchProducts = () => {
-        axios.get('http://127.0.0.1:5000/products')
+        axios.get('https://capstone-ecom-back-0acc37750539.herokuapp.com/products')
         .then(response => {
             setProducts(response.data);
         }) 
@@ -33,7 +33,7 @@ const Admin = () => {
             return;
         }
 
-        axios.post('http://127.0.0.1:5000/products', { name, description, imageUrl, price: priceAsNumber })
+        axios.post('https://capstone-ecom-back-0acc37750539.herokuapp.com/products', { name, description, imageUrl, price: priceAsNumber })
         .then(response => {
             setProducts([...products, response.data]);
             setName('');
@@ -48,7 +48,7 @@ const Admin = () => {
     };
 
     const updateProduct = (id) => {
-        axios.put(`http://127.0.0.1:5000/products/${id}`, { name, description, imageUrl, price })
+        axios.put(`https://capstone-ecom-back-0acc37750539.herokuapp.com/products/${id}`, { name, description, imageUrl, price })
         .then(response => {
             setProducts(products.map(product => (product.id === id ? response.data : product)));
             setName('');
@@ -64,7 +64,7 @@ const Admin = () => {
     };
 
     const deleteProduct = (id) => {
-        axios.delete(`http://127.0.0.1:5000/products/${id}`)
+        axios.delete(`https://capstone-ecom-back-0acc37750539.herokuapp.com/products/${id}`)
         .then(() => {
             setProducts(products.filter(product => product.id !== id));
             fetchProducts();
